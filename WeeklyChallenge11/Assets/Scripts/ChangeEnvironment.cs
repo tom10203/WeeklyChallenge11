@@ -109,7 +109,7 @@ public class ChangeEnvironment : MonoBehaviour
             skybox.SetFloat("_Exposure", newExposure);
             skybox.SetColor("_SkyTint", newSkyboxColor);
             directionalLight.intensity = newIntensity;
-            snow.SetFloat("SnowFade", newFade);
+            snow.SetFloat("_SnowFade", newFade);
             snow.SetFloat("_Metallic", newMetallic);
             snow.SetFloat("_Smoothness", newSmoothness);
             snow.SetColor("_SnowColor", newSnowColor);  
