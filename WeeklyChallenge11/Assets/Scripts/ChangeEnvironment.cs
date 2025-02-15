@@ -41,7 +41,7 @@ public class ChangeEnvironment : MonoBehaviour
     private void Start()
     {
 
-        defaultTint = skybox.GetColor("_SkyTint");
+        //defaultTint = skybox.GetColor("_SkyTint");
     }
 
     public void ChangeToSnow()
@@ -74,7 +74,7 @@ public class ChangeEnvironment : MonoBehaviour
 
     private IEnumerator ChangeEnvironmentRoutine(float targetExposure, float targetIntensity, float targetSnowFade, bool isRain, bool isAutum)
     {
-        float duration = 2.0f; // Adjust transition speed
+        float duration = 2.0f; 
         float elapsedTime = 0f;
 
         float startExposure = skybox.GetFloat("_Exposure");
@@ -85,8 +85,6 @@ public class ChangeEnvironment : MonoBehaviour
 
         Color skyboxTint = skybox.GetColor("_SkyTint");
         Color snowTint = snow.GetColor("_SnowColor");
-
-        // Set target values for metallic and smoothness based on weather
         float targetMetallic = isRain ? rainMetalic : defaultMetallic;
         float targetSmoothness = isRain ? rainSmoothness : defaultSmoothness;
 
